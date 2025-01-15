@@ -49,13 +49,15 @@ function App() {
 
 
 
-
+  const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
   useEffect(() => {
     fetch(
-      `https://openapi.naver.com/v1/search/shop?query=강아지&filter=false&sort=sim&display=100&start=1`,
+      `${PROXY}/v1/search/shop?query=강아지&filter=false&sort=sim&display=100&start=1`,
       {
         method: "GET",
         headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
           "X-Naver-Client-Id": Client_Id,
           "X-Naver-Client-Secret": Client_Pw,
         },
@@ -72,10 +74,12 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://openapi.naver.com/v1/search/shop?query=고양이&filter=false&sort=sim&display=100&start=1`,
+      `${PROXY}/v1/search/shop?query=고양이&filter=false&sort=sim&display=100&start=1`,
       {
         method: "GET",
         headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
           "X-Naver-Client-Id": Client_Id,
           "X-Naver-Client-Secret": Client_Pw,
         },
