@@ -4,7 +4,6 @@ to = "/index.html"
 status = 200
 
 
-// netlify.toml
 [[redirects]]
   from = "/proxy/*"
   to = "https://openapi.naver.com/:splat"
