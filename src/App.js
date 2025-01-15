@@ -110,20 +110,20 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />}></Route>
-              <Route path="Event" element={<Event />}></Route>
+              <Route path="/Event" element={<Event />}></Route>
               <Route
-                path="DogList"
+                path="/DogList"
                 element={<DogList D_list={D_list} setD_List={setD_List} setCart={setCart} cart={cart} />}
               ></Route>
               <Route
-                path="CatList"
+                path="/CatList"
                 element={<CatList list={C_list} setC_List={setC_List} setCart={setCart} cart={cart} />}
               ></Route>
-              <Route path="Cart" element={<Cart setCart={setCart} cart={cart} />}></Route>
+              <Route path="/Cart" element={<Cart setCart={setCart} cart={cart} />}></Route>
             </Routes>
           </BrowserRouter>
         </div>
-        <div id="search" style={{ display: "none" }}>
+        <div id="/search" style={{ display: "none" }}>
           <Sch all={all} keyward={keyward} />
         </div>
       </Stack>
