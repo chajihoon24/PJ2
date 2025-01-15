@@ -1,0 +1,269 @@
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.card-title{
+  height: 72px;
+  overflow-y: hidden;
+}
+.col{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.card-img-top{
+  width: 286px;
+  height: 286px;
+}
+
+.cate_btn{
+  margin: 7px;
+  
+}
+#D_cate{
+  padding-left: 2vw;
+  border: #d8d8d8d3 solid 2px;
+  font-size: larger;
+  font-weight: 600;
+  color: #575d68;
+
+}
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .navBar,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+.navBar{
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+}
+#detail{
+  margin-right: 10px;
+  background-color: rgb(219, 215, 207);
+}
+.btn-warning{
+  background-color: rgb(255, 196, 107)
+}
+.btn-warning:hover{
+  background-color:rgb(255, 175, 54) ;
+}
+.btn-warning:active{
+  scale: 0.95;
+}
+#detail:active{
+  scale: 0.95;
+  }
+#detail:hover{
+  background-color: rgb(233, 233, 233);
+}
+
+#cat{
+  margin: auto;
+    width: max-content;
+    margin-top: 5vh;
+    padding-left: 30px;
+}
+#nonlist{
+  font-size: 40px;
+  margin-top: 3vw;
+  color: rgb(171, 171, 172);
+  
+}
+#nonlist_con{
+    margin: auto;
+      width: max-content;
+      margin-top: 4vh;
+}
+#space{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.nav-link{
+  font-size: 23px;
+  font-weight: 600;
+}
+.nav-link:first-child{
+  color: rgb(235, 82, 82) !important;
+}
+#nonHome{
+  margin: auto;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: rgb(209, 223, 235);
+  margin-top: 5vh;
+  border: none;
+}
+#nonHome:hover{
+  background-color: rgb(192, 223, 250);
+ 
+}
+#nonHome:active{
+  scale: 0.95;
+
+}
+.me-2{
+  all:unset;
+  border-radius: 10px;
+  border: solid rgb(140, 140, 140) 2px;
+  background-color: white;
+  padding-left: 5px;
+  
+}
+.me-2:focus{
+  border: 3px solid rgb(192, 223, 250) ;
+}
+.search_notice{
+  color: #82868e;
+  margin-left: 1vw;
+  
+}
+#search_notice p span{
+  background-color: #efefef;
+  border-radius: 10%;
+  padding: 5px;
+}
+.cate_notice {
+  color: #82868e;
+  margin-left: 1vw;
+  
+}
+.cate_notice span:nth-of-type(2){
+    background-color: #efefef;
+      border-radius: 10%;
+      padding: 5px;
+      margin-left: 2px;
+
+}
+#nor{
+  color: #82868e;
+  margin-top: 10px;
+  margin-left: 0.5vw;
+}
+.btn-outline-success{
+  color: #282c34;
+  border: 2px solid #87898f;
+}
+.btn-outline-success:hover{
+  color: white;
+  background-color: rgb(75, 199, 102);
+  border: 2px solid rgb(75, 199, 102);
+}
+::selection{
+  background-color: #02ccff46;
+  
+}
+#non{
+  position: absolute;
+  right: 250px;
+  bottom:270px;
+}
+#nonListImage{
+  position: relative;
+}
+#d_img{
+  border-radius: 5px;
+  border: #c4c5c7 solid 2px;
+}
+.cate_in{
+  color: #444952;
+
+}
+#detail_in p{
+  font-size: 20px;
+  margin-top: 20px;
+}
+#container_modal img{
+  border: 1px solid #8a8d94;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+  
+}
+#container_modal div{
+  color: #444952;
+  margin-top: 6px;
+  font-size: 19px;
+}
+#container_modal div:nth-of-type(1) {
+  padding-top: 20px;
+  font-size: 30px;
+  padding-right: 10px;
+
+
+}
+#container_modal div:nth-of-type(2){
+  margin-top: 40px;
+  margin-bottom: 5px;
+
+  
+}
+#container_modal input{
+  width: 80px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button;
+  opacity: 1;
+}
+#container_modal div:nth-of-type(4) {
+  margin-top: 40px;
+
+float: right;
+/* float: inline-end; */
+}
+#home_con img{
+  margin: 110px;
+  /* margin-left: 100px; */
+}
+#home_con{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+}
+#home_con img:nth-of-type(0):hover {
+  z-index: 1;
+  scale: 1.1;
+  transition: 0.35s;
+
+  /* margin-left: 100px; */
+}
+#home_con img:nth-of-type(1):hover {
+  z-index: 1;
+  scale: 1.1;
+  transition: 0.35s;
+
+
+}
+#home_con img:nth-of-type(0):not(:hover ){
+  z-index: 0;
+  scale: 1.0;
+  transition: 0.35s;
+
+  /* margin-left: 100px; */
+}
+#home_con img:nth-of-type(1):not(:hover) {
+  z-index: 0;
+  scale: 1.0;
+  transition: 0.35s;
+
+
+}
