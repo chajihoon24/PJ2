@@ -27,8 +27,8 @@ function App() {
   const [D_list, setD_List] = useState([])
   const [C_list, setC_List] = useState([])
   const [keyward, setKeyward] = useState("")
-  
-  const[cart,setCart]=useState([])
+
+  const [cart, setCart] = useState([])
 
 
   // useEffect(() => {
@@ -46,13 +46,13 @@ function App() {
 
 
   // ==========================강아지API 패치==============================================
-  
-  
+
+
 
 
   useEffect(() => {
     fetch(
-      `/v1/search/shop?query=강아지&filter=false&sort=sim&display=100&start=1`,
+      `https://openapi.naver.com/v1/search/shop?query=강아지&filter=false&sort=sim&display=100&start=1`,
       {
         method: "GET",
         headers: {
@@ -68,11 +68,11 @@ function App() {
         setAll((prevAll) => [...prevAll, ...json.items]);
       });
   }, []);
-//===========================고양이API 패치===============================================
+  //===========================고양이API 패치===============================================
 
   useEffect(() => {
     fetch(
-      `/v1/search/shop?query=고양이&filter=false&sort=sim&display=100&start=1`,
+      `https://openapi.naver.com/v1/search/shop?query=고양이&filter=false&sort=sim&display=100&start=1`,
       {
         method: "GET",
         headers: {
