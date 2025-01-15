@@ -65,7 +65,7 @@ function App() {
     )
       .then((response) => response.json()) // 두줄아니면 {}넣으면 안됨
       .then((json) => {
-        // console.log(json)
+        console.log(json)
         setD_List(json.items);
         setAll((prevAll) => [...prevAll, ...json.items]);
       });
