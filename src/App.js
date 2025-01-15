@@ -50,6 +50,7 @@ function App() {
 
 
   const PROXY = window.location.hostname === 'localhost' ? '' : '/proxy';
+
   useEffect(() => {
     fetch(
       `${PROXY}/v1/search/shop?query=강아지&filter=false&sort=sim&display=100&start=1`,
@@ -63,11 +64,21 @@ function App() {
         },
       }
     )
-      .then((response) => response.json()) // 두줄아니면 {}넣으면 안됨
+      .then((response) => {
+        if (!response.ok) {
+          // 응답 상태가 200 OK가 아닐 경우 에러 처리
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((json) => {
-        console.log(json)
+        console.log(json);
         setD_List(json.items);
         setAll((prevAll) => [...prevAll, ...json.items]);
+      })
+      .catch((error) => {
+        // fetch 요청이 실패했을 때 오류 메시지를 출력
+        console.error("Error fetching dog list:", error);
       });
   }, []);
   //===========================고양이API 패치===============================================
@@ -85,11 +96,21 @@ function App() {
         },
       }
     )
-      .then((response) => response.json()) // 두줄아니면 {}넣으면 안됨
+      .then((response) => {
+        if (!response.ok) {
+          // 응답 상태가 200 OK가 아닐 경우 에러 처리
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((json) => {
-        // console.log(json)
-        setC_List(json.items);
+        console.log(json);
+        setD_List(json.items);
         setAll((prevAll) => [...prevAll, ...json.items]);
+      })
+      .catch((error) => {
+        // fetch 요청이 실패했을 때 오류 메시지를 출력
+        console.error("Error fetching dog list:", error);
       });
   }, []);
 
